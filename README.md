@@ -3,3 +3,6 @@
 
 ### ⟢  ꒪ `( DESIN )` .  `« Autora »` ⏝⏝ ୭
 > *La autora es Belén Gutiérrez Castellano, y mi principal colaborador es un gran amigo llamado Alex El León.*
+
+
+Colaboradora : Irene Cid
