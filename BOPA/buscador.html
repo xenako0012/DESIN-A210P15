@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buscar | BOPA - Principado de Asturias</title>
+
+    <link rel="stylesheet" href="css/buscar-estilos.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         BARRA SUPERIOR
+    ====================================================== -->
+
+    <div class="barra-superior">
+
+        <div class="contenedor barra-superior-contenido">
+
+            <span class="portal-oficial">
+                Portal oficial del Principado de Asturias
+            </span>
+
+            <nav class="enlaces-superiores">
+
+                <a href="https://www.asturias.es/ast/">
+                    asturias.es
+                </a>
+
+                <a href="https://miprincipado.asturias.es/">
+                    miPrincipado
+                </a>
+
+                <a href="https://sede-electronica.asturias.es/">
+                    Sede electrónica
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CABECERA PRINCIPAL
+    ====================================================== -->
+
+    <header class="cabecera">
+
+        <div class="contenedor cabecera-contenido">
+
+
+            <!-- MARCA -->
+
+            <a href="index.html" class="marca">
+
+                <div class="marca-asturias">
+
+                    <img
+                        src="./imagenes/bandera-as.png"
+                        alt="Asturias"
+                    >
+
+                </div>
+
+
+                <div class="marca-texto">
+
+                    <span class="marca-principado">
+                        Principado
+                        <br>
+                        d'Asturies
+                    </span>
+
+                    <span class="separador"></span>
+
+                    <span class="marca-bopa">
+                        BOPA
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="navegacion">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a
+                    href="buscador.html"
+                    class="activo"
+                >
+                    Buscar
+                </a>
+
+                <a href="ayuda.html">
+                    Ayuda
+                </a>
+
+            </nav>
+
+
+
+            <!-- OPCIONES -->
+
+            <div class="opciones-pagina">
+
+                <button
+                    type="button"
+                    id="boton-tema"
+                    class="boton-opcion"
+                    aria-label="Cambiar tema"
+                    title="Cambiar tema"
+                >
+                    ☾
+                    <span>Tema</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    id="boton-idioma"
+                    class="boton-opcion"
+                    aria-label="Cambiar idioma"
+                    title="Cambiar idioma"
+                >
+                    ES
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="pagina-bopa pagina-buscador contenedor">
+
+
+        <!-- =================================================
+             COLUMNA IZQUIERDA
+        ================================================== -->
+
+        <aside class="columna-lateral izquierda">
+
+
+            <!-- NAVEGACIÓN -->
+
+            <div class="bloque-lateral">
+
+                <span class="titulo-lateral">
+                    NAVEGACIÓN
+                </span>
+
+                <h2>
+                    También te puede interesar
+                </h2>
+
+
+                <a href="https://www.asturias.es/ast/">
+                    Principado de Asturias
+                </a>
+
+                <a href="https://miprincipado.asturias.es/">
+                    miPrincipado
+                </a>
+
+                <a href="https://sede-electronica.asturias.es/">
+                    Sede electrónica
+                </a>
+
+                <a href="transparencia.html">
+                    Portal de transparencia
+                </a>
+
+                <a href="https://datos.abiertos.asturias.es/">
+                    Datos abiertos
+                </a>
+
+                <a href="https://www.asturias.es/ast/">
+                    Asturias.es
+                </a>
+
+            </div>
+
+
+
+            <!-- CONSULTA RÁPIDA -->
+
+            <div class="bloque-lateral">
+
+                <span class="titulo-lateral">
+                    BOPA
+                </span>
+
+                <h2>
+                    Consulta rápida
+                </h2>
+
+
+                <a href="buscador.html?tipo=decreto">
+                    Decretos
+                </a>
+
+                <a href="buscador.html?tipo=resolucion">
+                    Resoluciones
+                </a>
+
+                <a href="buscador.html?tipo=oposiciones">
+                    Oposiciones
+                </a>
+
+                <a href="buscador.html?tipo=subvenciones">
+                    Subvenciones
+                </a>
+
+            </div>
+
+
+
+            <!-- ASTURIAS -->
+
+            <div class="bloque-lateral bloque-asturias">
+
+                <div class="mini-bandera">
+
+                    <img
+                        src="./imagenes/bandera-as.png"
+                        alt="Bandera de Asturias"
+                    >
+
+                </div>
+
+                <strong>
+                    Información oficial
+                </strong>
+
+                <p>
+                    Consulta las publicaciones oficiales
+                    del Principado de Asturias.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CONTENIDO CENTRAL
+        ================================================== -->
+
+        <section class="contenido-principal">
+
+
+            <!-- CABECERA -->
+
+            <div class="cabecera-buscador">
+
+                <span class="etiqueta etiqueta-verde">
+                    BOPA
+                </span>
+
+                <h1>
+                    Buscar en el Boletín Oficial
+                </h1>
+
+                <p>
+                    Encuentra disposiciones, resoluciones,
+                    convocatorias y anuncios utilizando
+                    palabras clave o filtros.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BUSCADOR PRINCIPAL
+            ================================================== -->
+
+            <section class="panel-busqueda">
+
+                <div class="cabecera-panel">
+
+                    <div>
+
+                        <span class="etiqueta etiqueta-azul">
+                            BUSCADOR
+                        </span>
+
+                        <h2>
+                            ¿Qué estás buscando?
+                        </h2>
+
+                        <p>
+                            Puedes buscar por palabras clave,
+                            organismo, tipo de publicación o fecha.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <form id="form-busqueda">
+
+                    <label for="busqueda-principal">
+                        Buscar en el BOPA
+                    </label>
+
+
+                    <div class="busqueda-principal">
+
+                        <div class="input-con-icono">
+
+                            <span class="icono-busqueda">
+                                ⌕
+                            </span>
+
+                            <input
+                                type="search"
+                                id="busqueda-principal"
+                                name="q"
+                                placeholder="Ej.: educación, subvenciones, decreto..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="boton-buscar"
+                        >
+                            Buscar
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- AUTOCOMPLETADO -->
+
+                    <div
+                        id="sugerencias"
+                        class="sugerencias"
+                    ></div>
+
+
+
+                    <!-- BÚSQUEDAS POPULARES -->
+
+                    <div class="ejemplos-busqueda">
+
+                        <span>
+                            Búsquedas populares:
+                        </span>
+
+
+                        <button
+                            type="button"
+                            data-busqueda="educación"
+                        >
+                            educación
+                        </button>
+
+
+                        <button
+                            type="button"
+                            data-busqueda="subvenciones"
+                        >
+                            subvenciones
+                        </button>
+
+
+                        <button
+                            type="button"
+                            data-busqueda="empleo público"
+                        >
+                            empleo público
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ZONA DE RESULTADOS
+            ================================================== -->
+
+            <div class="zona-resultados">
+
+
+                <!-- =================================================
+                     FILTROS
+                ================================================== -->
+
+                <aside class="filtros">
+
+                    <div class="filtros-cabecera">
+
+                        <div>
+
+                            <span class="etiqueta etiqueta-verde">
+                                FILTROS
+                            </span>
+
+                            <h2>
+                                Refinar resultados
+                            </h2>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="limpiar-filtros"
+                            class="boton-limpiar"
+                        >
+                            Limpiar
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- TIPO DE PUBLICACIÓN -->
+
+                    <div class="grupo-filtro">
+
+                        <h3>
+                            Tipo de publicación
+                        </h3>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="tipo"
+                                value="decreto"
+                            >
+
+                            <span>
+                                Decretos
+                            </span>
+
+                            <small>
+                                24
+                            </small>
+
+                        </label>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="tipo"
+                                value="resolucion"
+                            >
+
+                            <span>
+                                Resoluciones
+                            </span>
+
+                            <small>
+                                38
+                            </small>
+
+                        </label>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="tipo"
+                                value="oposiciones"
+                            >
+
+                            <span>
+                                Oposiciones y concursos
+                            </span>
+
+                            <small>
+                                17
+                            </small>
+
+                        </label>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="tipo"
+                                value="subvenciones"
+                            >
+
+                            <span>
+                                Subvenciones
+                            </span>
+
+                            <small>
+                                29
+                            </small>
+
+                        </label>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="tipo"
+                                value="anuncio"
+                            >
+
+                            <span>
+                                Anuncios
+                            </span>
+
+                            <small>
+                                42
+                            </small>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- ÓRGANO EMISOR -->
+
+                    <div class="grupo-filtro">
+
+                        <h3>
+                            Órgano emisor
+                        </h3>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="organismo"
+                                value="educacion"
+                            >
+
+                            <span>
+                                Educación
+                            </span>
+
+                            <small>
+                                31
+                            </small>
+
+                        </label>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="organismo"
+                                value="salud"
+                            >
+
+                            <span>
+                                Salud
+                            </span>
+
+                            <small>
+                                26
+                            </small>
+
+                        </label>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="organismo"
+                                value="presidencia"
+                            >
+
+                            <span>
+                                Presidencia
+                            </span>
+
+                            <small>
+                                18
+                            </small>
+
+                        </label>
+
+
+                        <label class="checkbox-filtro">
+
+                            <input
+                                type="checkbox"
+                                name="organismo"
+                                value="empleo"
+                            >
+
+                            <span>
+                                Empleo
+                            </span>
+
+                            <small>
+                                22
+                            </small>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- FECHA -->
+
+                    <div class="grupo-filtro">
+
+                        <h3>
+                            Fecha de publicación
+                        </h3>
+
+
+                        <label class="campo-fecha">
+
+                            <span>
+                                Desde
+                            </span>
+
+                            <input
+                                type="date"
+                                id="fecha-desde"
+                            >
+
+                        </label>
+
+
+                        <label class="campo-fecha">
+
+                            <span>
+                                Hasta
+                            </span>
+
+                            <input
+                                type="date"
+                                id="fecha-hasta"
+                            >
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- NÚMERO BOPA -->
+
+                    <div class="grupo-filtro">
+
+                        <h3>
+                            Número de BOPA
+                        </h3>
+
+
+                        <input
+                            type="number"
+                            id="numero-bopa"
+                            class="input-filtro"
+                            placeholder="Ej.: 186"
+                            min="1"
+                        >
+
+                    </div>
+
+                </aside>
+
+
+
+                <!-- =================================================
+                     RESULTADOS
+                ================================================== -->
+
+                <section class="resultados">
+
+
+                    <div class="resultados-cabecera">
+
+                        <div>
+
+                            <span
+                                id="numero-resultados"
+                                class="contador-resultados"
+                            >
+                                6 resultados
+                            </span>
+
+                            <p id="texto-filtro">
+                                Publicaciones encontradas
+                            </p>
+
+                        </div>
+
+
+                        <div class="ordenar">
+
+                            <label for="orden">
+                                Ordenar por
+                            </label>
+
+
+                            <select id="orden">
+
+                                <option value="relevancia">
+                                    Relevancia
+                                </option>
+
+                                <option value="fecha-desc">
+                                    Más recientes
+                                </option>
+
+                                <option value="fecha-asc">
+                                    Más antiguos
+                                </option>
+
+                                <option value="consultados">
+                                    Más consultados
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LISTA DE RESULTADOS -->
+
+                    <div id="lista-resultados">
+
+                        <!--
+                            Los resultados se generan
+                            mediante JavaScript.
+                        -->
+
+                    </div>
+
+
+
+                    <!-- SIN RESULTADOS -->
+
+                    <div
+                        id="sin-resultados"
+                        class="sin-resultados"
+                        hidden
+                    >
+
+                        <div class="icono-sin-resultados">
+                            ?
+                        </div>
+
+                        <h2>
+                            No hemos encontrado resultados
+                        </h2>
+
+                        <p>
+                            Prueba con otras palabras o elimina
+                            alguno de los filtros.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            id="reiniciar-busqueda"
+                            class="boton-secundario"
+                        >
+                            Limpiar búsqueda
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COLUMNA DERECHA
+        ================================================== -->
+
+        <aside class="columna-lateral derecha">
+
+
+            <!-- ACCESOS RÁPIDOS -->
+
+            <div class="bloque-lateral">
+
+                <span class="titulo-lateral">
+                    ACCESOS RÁPIDOS
+                </span>
+
+                <h2>
+                    Buscar por tipo
+                </h2>
+
+
+                <a href="buscador.html?tipo=decreto">
+                    Decretos
+                </a>
+
+                <a href="buscador.html?tipo=resolucion">
+                    Resoluciones
+                </a>
+
+                <a href="buscador.html?tipo=oposiciones">
+                    Oposiciones y concursos
+                </a>
+
+                <a href="buscador.html?tipo=subvenciones">
+                    Subvenciones
+                </a>
+
+                <a href="buscador.html">
+                    Todas las publicaciones
+                </a>
+
+            </div>
+
+
+
+            <!-- CONSEJO -->
+
+            <div class="bloque-lateral bloque-destacado">
+
+                <span class="titulo-lateral">
+                    CONSEJO
+                </span>
+
+                <h2>
+                    Utiliza varios filtros
+                </h2>
+
+                <p>
+                    Combinar palabras clave, organismo y fecha
+                    te ayudará a encontrar el documento que buscas.
+                </p>
+
+            </div>
+
+
+
+            <!-- HISTORIAL -->
+
+            <div class="bloque-lateral">
+
+                <span class="titulo-lateral">
+                    HISTORIAL
+                </span>
+
+                <h2>
+                    Búsquedas recientes
+                </h2>
+
+
+                <div
+                    id="historial-busquedas"
+                    class="historial-busquedas"
+                >
+
+                    <span>
+                        Todavía no hay búsquedas.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INFORMACIÓN DE ASTURIAS -->
+
+            <div class="bloque-lateral bloque-asturias">
+
+                <div class="mini-bandera">
+
+                    <img
+                        src="./imagenes/bandera-as.png"
+                        alt="Asturias"
+                    >
+
+                </div>
+
+                <span class="titulo-lateral">
+                    ASTURIAS
+                </span>
+
+                <h2>
+                    Publicación oficial
+                </h2>
+
+                <p>
+                    Información publicada por el
+                    Boletín Oficial del Principado
+                    de Asturias.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MODAL DE VISTA PREVIA
+    ====================================================== -->
+
+    <div
+        id="modal-preview"
+        class="modal-preview"
+        hidden
+    >
+
+        <div class="modal-fondo"></div>
+
+
+        <div class="modal-contenido">
+
+            <button
+                type="button"
+                id="cerrar-modal"
+                class="cerrar-modal"
+                aria-label="Cerrar vista previa"
+            >
+                ✕
+            </button>
+
+
+            <span class="etiqueta etiqueta-verde">
+                VISTA PREVIA
+            </span>
+
+
+            <div id="preview-contenido">
+
+                <!-- Contenido generado por JS -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+    ====================================================== -->
+
+    <footer class="pie-pagina">
+
+        <div class="contenedor pie-contenido">
+
+
+            <div class="pie-marca">
+
+                <div class="pie-bandera">
+
+                    <img
+                        src="./imagenes/bandera-as.png"
+                        alt="Asturias"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        BOPA
+                    </strong>
+
+                    <span>
+                        Boletín Oficial del Principado
+                        de Asturias
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="pie-enlaces">
+
+                <a href="#">
+                    Contacto
+                </a>
+
+                <a href="#">
+                    Accesibilidad
+                </a>
+
+                <a href="#">
+                    Aviso legal
+                </a>
+
+                <a href="#">
+                    Privacidad
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="pie-final">
+
+            <div class="contenedor">
+
+                Adrián, Marcos, Alejandro y Belén.
+                2026 © CIFP Avilés.
+                Todos los derechos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         CAMBIO DE TEMA
+         
+         Lo dejo aquí temporalmente para que el botón
+         funcione sin crear un tercer archivo JS.
+    ====================================================== -->
+
+    <script>
+
+        const botonTema = document.getElementById("boton-tema");
+
+        botonTema.addEventListener("click", function () {
+
+            document.body.classList.toggle("tema-oscuro");
+
+            const oscuro =
+                document.body.classList.contains("tema-oscuro");
+
+            if (oscuro) {
+
+                botonTema.innerHTML = "☀ <span>Tema</span>";
+
+            } else {
+
+                botonTema.innerHTML = "☾ <span>Tema</span>";
+
+            }
+
+        });
+
+
+
+        /* =================================================
+           BOTONES DE BÚSQUEDA POPULAR
+        ================================================== */
+
+        const botonesBusqueda =
+            document.querySelectorAll(
+                "[data-busqueda]"
+            );
+
+        const campoBusqueda =
+            document.getElementById(
+                "busqueda-principal"
+            );
+
+
+        botonesBusqueda.forEach(function (boton) {
+
+            boton.addEventListener(
+                "click",
+                function () {
+
+                    campoBusqueda.value =
+                        boton.dataset.busqueda;
+
+                    campoBusqueda.focus();
+
+                }
+            );
+
+        });
+
+
+
+        /* =================================================
+           BOTÓN DE IDIOMA
+           
+           Por ahora funciona como selector visual.
+           Más adelante podemos hacer que cambie
+           realmente los textos a asturiano.
+        ================================================== */
+
+        const botonIdioma =
+            document.getElementById(
+                "boton-idioma"
+            );
+
+
+        botonIdioma.addEventListener(
+            "click",
+            function () {
+
+                if (botonIdioma.textContent.trim() === "ES") {
+
+                    botonIdioma.textContent = "AST";
+
+                } else {
+
+                    botonIdioma.textContent = "ES";
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
