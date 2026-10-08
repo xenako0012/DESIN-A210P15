@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resumen BOPA | Mejoras y documentación</title>
+  <style>
+    :root {
+      --verde-asturias: #123b32;
+      --verde-oscuro: #0c2d26;
+      --verde-medio: #1b5145;
+      --azul-cantabrico: #176b91;
+      --azul-oscuro: #11516f;
+      --amarillo-asturias: #f4d03f;
+      --crema: #f4f1e8;
+      --crema-oscuro: #e9e4d7;
+      --blanco: #ffffff;
+      --texto: #18352f;
+      --texto-secundario: #5f6e69;
+      --borde: #d6dfdb;
+      --fondo: #f4f1e8;
+      --fondo-tarjeta: #ffffff;
+      --sombra: 0 8px 24px rgba(18, 59, 50, 0.12);
+      --verde-suave: #e8f3ef;
+      --azul-suave: #edf6fb;
+      --naranja: #f2a65a;
+      --rojo-suave: #fbeaea;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .cabecera {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 3px 10px rgba(15, 30, 26, 0.08);
+    }
+
+    .barra-superior {
+      background: var(--crema);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .barra-superior-contenido {
+      max-width: 1280px;
+      margin: 0 auto;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 24px;
+      font-size: 0.82rem;
+      color: var(--texto);
+    }
+
+    .enlaces-superiores {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .enlaces-superiores a {
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    .enlaces-superiores a:hover {
+      color: var(--azul-cantabrico);
+    }
+
+    .cabecera-principal {
+      background: linear-gradient(100deg, var(--verde-asturias) 0%, var(--verde-asturias) 65%, var(--azul-cantabrico) 100%);
+      border-bottom: 4px solid var(--amarillo-asturias);
+    }
+
+    .cabecera-contenido {
+      max-width: 1280px;
+      margin: 0 auto;
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 0 24px;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: white;
+    }
+
+    .marca-asturias {
+      width: 58px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .marca-asturias img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .marca-texto {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .marca-principado {
+      font-size: 0.82rem;
+      line-height: 1.1;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .separador {
+      width: 1px;
+      height: 42px;
+      background: rgba(255,255,255,0.6);
+    }
+
+    .marca-bopa {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .navegacion {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .navegacion a {
+      color: white;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.25s ease;
+    }
+
+    .navegacion a:hover,
+    .navegacion a.activo {
+      background: rgba(255,255,255,0.08);
+      border-bottom-color: var(--amarillo-asturias);
+    }
+
+    .boton-opcion {
+      border: 1px solid rgba(255,255,255,0.38);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      padding: 8px 12px;
+      font-weight: 700;
+    }
+
+    .menu-desplegable {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-desplegable summary {
+      list-style: none;
+      color: white;
+      padding: 12px 16px;
+      font-weight: 700;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+    }
+
+    .menu-desplegable summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .menu-desplegable summary::after {
+      content: "▾";
+      font-size: 0.8rem;
+    }
+
+    .mega-menu {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 12px);
+      width: min(760px, 82vw);
+      background: rgba(255,255,255,0.98);
+      color: var(--texto);
+      border-radius: 14px;
+      box-shadow: 0 18px 40px rgba(15, 30, 26, 0.18);
+      border: 1px solid var(--borde);
+      padding: 18px 20px;
+      z-index: 200;
+    }
+
+    .mega-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 18px;
+    }
+
+    .mega-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mega-col h3 {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--verde-medio);
+      margin-bottom: 6px;
+    }
+
+    .mega-col a {
+      color: var(--texto);
+      font-size: 0.92rem;
+      line-height: 1.4;
+      padding: 4px 0;
+    }
+
+    .pagina {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(18,59,50,0.96), rgba(23,107,145,0.9));
+      border-radius: 22px;
+      padding: 42px 38px;
+      color: white;
+      box-shadow: var(--sombra);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero::before {
+      width: 220px;
+      height: 220px;
+      right: -40px;
+      top: -60px;
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      left: -30px;
+      bottom: -40px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: rgba(244, 208, 63, 0.18);
+      color: #fff8d6;
+      border: 1px solid rgba(244,208,63,0.4);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 640px;
+      color: rgba(255,255,255,0.88);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .boton-principal,
+    .boton-secundario {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .boton-principal {
+      background: var(--amarillo-asturias);
+      color: var(--verde-oscuro);
+      box-shadow: 0 8px 20px rgba(244, 208, 63, 0.28);
+    }
+
+    .boton-secundario {
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.05);
+      color: white;
+    }
+
+    .boton-principal:hover,
+    .boton-secundario:hover {
+      transform: translateY(-1px);
+    }
+
+    .estadisticas {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: var(--fondo-tarjeta);
+      border: 1px solid var(--borde);
+      border-radius: 18px;
+      padding: 22px 18px;
+      box-shadow: var(--sombra);
+    }
+
+    .stat .numero {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--verde-oscuro);
+      margin-bottom: 6px;
+    }
+
+    .stat .label {
+      color: var(--texto-secundario);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 2.2fr;
+      gap: 24px;
+      margin-top: 28px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--fondo-tarjeta);
+      border: 1px solid var(--borde);
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      padding: 24px;
+    }
+
+    .panel h2 {
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+      color: var(--verde-oscuro);
+    }
+
+    .checklist {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--texto);
+      padding: 10px 12px;
+      background: var(--verde-suave);
+      border-radius: 12px;
+      border: 1px solid rgba(18,59,50,0.08);
+    }
+
+    .check {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--verde-asturias);
+      color: white;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .lista-archivos {
+      display: grid;
+      gap: 18px;
+    }
+
+    .file-card {
+      border: 1px solid var(--borde);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbfa 100%);
+      border-radius: 18px;
+      padding: 20px 20px 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .file-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(18,59,50,0.08);
+    }
+
+    .file-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      background: var(--azul-suave);
+      color: var(--azul-oscuro);
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .file-card h3 {
+      font-size: 1.25rem;
+      color: var(--verde-oscuro);
+      margin-bottom: 10px;
+    }
+
+    .file-card p {
+      color: var(--texto-secundario);
+      margin-bottom: 12px;
+    }
+
+    .file-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .file-tags span {
+      background: var(--crema);
+      color: var(--texto);
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .tabla-cumplimiento {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      border: 1px solid var(--borde);
+    }
+
+    .tabla-cumplimiento th,
+    .tabla-cumplimiento td {
+      border: 1px solid var(--borde);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+
+    .tabla-cumplimiento th {
+      background: var(--verde-suave);
+      color: var(--verde-oscuro);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tabla-cumplimiento td {
+      color: var(--texto-secundario);
+      line-height: 1.55;
+    }
+
+    .tabla-cumplimiento td:first-child {
+      color: var(--texto);
+      font-weight: 700;
+    }
+
+    .resumen-final {
+      margin-top: 30px;
+      background: linear-gradient(135deg, var(--crema) 0%, #ffffff 100%);
+      border: 1px solid var(--borde);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--sombra);
+    }
+
+    .resumen-final h2 {
+      color: var(--verde-oscuro);
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+    }
+
+    .resumen-final p {
+      color: var(--texto-secundario);
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .estadisticas {
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .cabecera-contenido,
+      .barra-superior-contenido,
+      .pagina {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .cabecera-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      .navegacion {
+        width: 100%;
+      }
+
+      .hero {
+        padding: 28px 22px;
+      }
+
+      .estadisticas {
+        grid-template-columns: 1fr;
+      }
+
+      .file-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="barra-superior">
+      <div class="barra-superior-contenido">
+        <span>Portal oficial del Principado de Asturias</span>
+        <nav class="enlaces-superiores" aria-label="Enlaces institucionales">
+          <a href="#">asturias.es</a>
+          <a href="#">miPrincipado</a>
+          <a href="#">Sede electrónica</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="cabecera-principal">
+      <div class="cabecera-contenido">
+        <a href="BOPA/index.html" class="marca" aria-label="Inicio BOPA">
+          <div class="marca-asturias">
+            <img src="BOPA/imagenes/bandera-as.png" alt="Bandera de Asturias" />
+          </div>
+          <div class="marca-texto">
+            <span class="marca-principado">Principado<br />d'Asturies</span>
+            <span class="separador"></span>
+            <span class="marca-bopa">BOPA</span>
+          </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+          <a href="BOPA/index.html" class="activo">Inicio</a>
+          <a href="BOPA/buscador.html">Buscar</a>
+          <a href="BOPA/transparencia.html">Transparencia</a>
+          <a href="BOPA/ayuda.html">Ayuda</a>
+        </nav>
+
+        <button type="button" class="boton-opcion" aria-label="Tema">☾ TEMA</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="etiqueta">Resumen del proyecto</span>
+        <h1>Documentación y mejoras del portal BOPA</h1>
+        <p>
+          Este resumen recoge la estructura, la finalidad y las mejoras principales aplicadas en los archivos
+          de la carpeta BOPA para ofrecer una experiencia más clara, útil y moderna para consultar la información oficial.
+        </p>
+        <div class="hero-actions">
+          <a href="BOPA/index.html" class="boton-principal">Ver portal BOPA</a>
+          <a href="#resumen-archivos" class="boton-secundario">Ver detalles</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="estadisticas" aria-label="Estadísticas del proyecto">
+      <article class="stat">
+        <span class="numero">7</span>
+        <span class="label">Archivos principales</span>
+      </article>
+      <article class="stat">
+        <span class="numero">5</span>
+        <span class="label">Páginas principales</span>
+      </article>
+      <article class="stat">
+        <span class="numero">1</span>
+        <span class="label">Mega-menú añadido</span>
+      </article>
+      <article class="stat">
+        <span class="numero">+15</span>
+        <span class="label">Mejoras aplicadas</span>
+      </article>
+    </section>
+
+    <div class="layout" id="resumen-archivos">
+      <aside class="panel">
+        <h2>Resumen ejecutivo</h2>
+        <ul class="checklist">
+          <li><span class="check">✓</span><span>Este proyecto ha sido desarrollado por alumnos de DAM2 como ejercicio práctico de diseño web, usabilidad y documentación aplicada a un portal institucional.</span></li>
+          <li><span class="check">✓</span><span>Se consolida una identidad visual coherente con la imagen oficial del Principado, adaptando colores, jerarquías y estructura a una navegación clara y profesional.</span></li>
+          <li><span class="check">✓</span><span>Se incorpora un mega-menú desplegable para organizar mejor la información y mejorar la experiencia de búsqueda y exploración del usuario.</span></li>
+          <li><span class="check">✓</span><span>Se corrigen aspectos de accesibilidad y legibilidad, como el contraste de enlaces, el foco visible y la eliminación de elementos vacíos o poco útiles.</span></li>
+          <li><span class="check">✓</span><span>El resultado final refleja la evolución de un trabajo académico en DAM2, centrado en mejorar la experiencia del usuario y aplicar buenas prácticas de diseño y desarrollo web.</span></li>
+        </ul>
+      </aside>
+
+      <section class="panel">
+        <h2>Archivos y mejoras aplicadas</h2>
+        <div id="lista-archivos" class="lista-archivos" aria-live="polite"></div>
+      </section>
+    </div>
+
+    <section class="resumen-final">
+      <h2>Checklist de cumplimiento UX/UI</h2>
+      <p>
+        La siguiente tabla recoge los requisitos principales de usabilidad, accesibilidad y diseño, junto con la explicación de por qué se cumplen y dónde se puede comprobar en la web.
+      </p>
+      <table class="tabla-cumplimiento" aria-label="Checklist de cumplimiento de requisitos">
+        <thead>
+          <tr>
+            <th>Requisito</th>
+            <th>Por qué se cumple</th>
+            <th>Dónde se observa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Menús con jerarquía clara</td>
+            <td>La navegación principal se organiza por secciones muy visibles: Inicio, Buscar, Transparencia y Ayuda, además del menú desplegable con Temas, Gobierno y Actualidad.</td>
+            <td>En <a href="BOPA/index.html">BOPA/index.html</a>, <a href="BOPA/buscador.html">BOPA/buscador.html</a> y <a href="BOPA/transparencia.html">BOPA/transparencia.html</a>.</td>
+          </tr>
+          <tr>
+            <td>Etiquetas claras</td>
+            <td>Los textos de los enlaces y etiquetas son directos y comprensibles para el usuario, sin ambigüedad.</td>
+            <td>En la cabecera y en los bloques laterales de <a href="BOPA/index.html">BOPA/index.html</a> y <a href="BOPA/ayuda.html">BOPA/ayuda.html</a>.</td>
+          </tr>
+          <tr>
+            <td>Accesibilidad</td>
+            <td>Se añadió un enlace “Saltar al contenido principal” y se mejoró el foco visible para facilitar la navegación por teclado.</td>
+            <td>En <a href="BOPA/css/estilos.css">BOPA/css/estilos.css</a> y en cada página principal.</td>
+          </tr>
+          <tr>
+            <td>Menú desplegable</td>
+            <td>Se incluye un mega-menú para agrupar categorías de contenido y evitar saturar la vista principal.</td>
+            <td>En la cabecera de <a href="BOPA/index.html">BOPA/index.html</a>, <a href="BOPA/buscador.html">BOPA/buscador.html</a>, <a href="BOPA/documento.html">BOPA/documento.html</a> y <a href="BOPA/transparencia.html">BOPA/transparencia.html</a>.</td>
+          </tr>
+          <tr>
+            <td>Jerarquía visual</td>
+            <td>Se diferencian bien los títulos, bloques, etiquetas y elementos destacados mediante tamaño, color y espaciado.</td>
+            <td>En la portada y en las secciones de contenido de <a href="BOPA/index.html">BOPA/index.html</a>.</td>
+          </tr>
+          <tr>
+            <td>Colores y contraste</td>
+            <td>Se corrigió el contraste para que los enlaces sean legibles sin depender del hover, manteniendo la identidad institucional.</td>
+            <td>En <a href="BOPA/css/estilos.css">BOPA/css/estilos.css</a>.</td>
+          </tr>
+          <tr>
+            <td>Tipografía legible</td>
+            <td>Se usa una fuente simple y clara, con tamaños y pesos diferenciados para jerarquizar información.</td>
+            <td>En todas las páginas y en el sistema visual global del CSS.</td>
+          </tr>
+          <tr>
+            <td>Distribución y espaciado</td>
+            <td>Los bloques están alineados y separados correctamente, lo que mejora la lectura y la sensación de orden.</td>
+            <td>En <a href="BOPA/index.html">BOPA/index.html</a> y <a href="BOPA/transparencia.html">BOPA/transparencia.html</a>.</td>
+          </tr>
+          <tr>
+            <td>Botones con feedback</td>
+            <td>Los botones y enlaces responden visualmente al hover y al foco, mostrando que son interactivos.</td>
+            <td>En la cabecera y el contenido principal del portal.</td>
+          </tr>
+          <tr>
+            <td>Enlaces reales y útiles</td>
+            <td>Se sustituyeron enlaces vacíos por rutas concretas, evitando páginas rotas o páginas sin destino.</td>
+            <td>En la navegación y en el pie de cada página de la carpeta <a href="BOPA/index.html">BOPA</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h2>Conclusión</h2>
+      <p>
+        La carpeta BOPA presenta una base sólida para un portal institucional funcional y visualmente ordenado.
+        Sus archivos y recursos han sido estructurados con una lógica clara: inicio, consulta, detalle documental,
+        ayuda, transparencia y estilos compartidos. Las mejoras realizadas se centran en la claridad de contenido,
+        la consistencia del diseño, la accesibilidad y una navegación más potente con menú desplegable.
+      </p>
+      <p>
+        En conjunto, el proyecto logra transmitir un tono serio y oficial propio del Boletín Oficial del Principado
+        de Asturias, manteniendo una experiencia de consulta accesible, legible y moderna para el usuario.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const archivos = [
+      {
+        archivo: 'BOPA/index.html',
+        tipo: 'Inicio',
+        titulo: 'Portada institucional',
+        descripcion: 'Define la primera vista del portal, con cabecera institucional, mega-menú desplegable, hero visual y bloques informativos con acceso claro a la navegación.',
+        mejoras: ['Diseño institucional', 'Mega menú', 'Acceso rápido', 'Jerarquía visual']
+      },
+      {
+        archivo: 'BOPA/buscador.html',
+        tipo: 'Búsqueda',
+        titulo: 'Motor de consulta',
+        descripcion: 'Permite localizar publicaciones por palabras clave, filtros, número de boletín y tipo de documento con una estructura limpia, navegación institucional y mejor legibilidad.',
+        mejoras: ['Filtros de búsqueda', 'Resultados ordenados', 'UX clara', 'Contraste mejorado']
+      },
+      {
+        archivo: 'BOPA/documento.html',
+        tipo: 'Detalle',
+        titulo: 'Vista del documento',
+        descripcion: 'Muestra la información específica de cada publicación, manteniendo un esquema coherent con el resto del sitio y un estilo formal y legible.',
+        mejoras: ['Detalle documentado', 'Formato equilibrado', 'Lectura clara', 'Navegación directa']
+      },
+      {
+        archivo: 'BOPA/ayuda.html',
+        tipo: 'Soporte',
+        titulo: 'Guía de uso',
+        descripcion: 'Explica cómo consultar publicaciones, localizar datos y usar la plataforma con pasos sencillos, enlaces útiles y mejor accesibilidad.',
+        mejoras: ['Asistencia', 'Orientación', 'Exploración guiada', 'Accesibilidad']
+      },
+      {
+        archivo: 'BOPA/transparencia.html',
+        tipo: 'Información',
+        titulo: 'Sección institucional',
+        descripcion: 'Recoge información sobre transparencia y acceso a contenidos relevantes del portal, reforzando su valor institucional y de servicio público.',
+        mejoras: ['Transparencia', 'Credibilidad', 'Información útil', 'Accesibilidad']
+      },
+      {
+        archivo: 'BOPA/css/estilos.css',
+        tipo: 'Estilo',
+        titulo: 'Sistema visual',
+        descripcion: 'Centraliza la identidad gráfica del proyecto: paleta institucional, dimensiones, espaciado, tipografía, navegación desplegable y mejoras de contraste/accesibilidad.',
+        mejoras: ['Consistencia visual', 'Mega menú', 'Diseño responsivo', 'Accesibilidad']
+      },
+      {
+        archivo: 'BOPA/js/app.js',
+        tipo: 'Lógica',
+        titulo: 'Interacción y contenido dinámico',
+        descripcion: 'Gestiona el comportamiento de la aplicación, datos de ejemplo, filtros y renderizado de resultados para dar dinamismo al proyecto.',
+        mejoras: ['Funcionalidad', 'Datos dinámicos', 'Interactividad', 'Procesamiento de consultas']
+      }
+    ];
+
+    const lista = document.getElementById('lista-archivos');
+
+    lista.innerHTML = archivos.map((item) => `
+      <article class="file-card">
+        <div class="file-top">
+          <span class="badge">${item.tipo}</span>
+          <span class="badge">${item.archivo}</span>
+        </div>
+        <h3>${item.titulo}</h3>
+        <p>${item.descripcion}</p>
+        <div class="file-tags">
+          ${item.mejoras.map((mejora) => `<span>${mejora}</span>`).join('')}
+        </div>
+      </article>
+    `).join('');
+  </script>
+</body>
+</html>
