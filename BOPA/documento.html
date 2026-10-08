@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento | BOPA</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="./imagenes/escudo-as.png" type="image/png">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera">
+      <div class="barra-superior">
+        <div class="contenedor barra-superior-contenido">
+          <span class="portal-oficial">Portal oficial del Principado de Asturias</span>
+
+          <nav class="enlaces-superiores">
+            <a href="https://www.asturias.es/ast/" target="_blank" rel="noopener noreferrer">asturias.es</a>
+            <a href="https://miprincipado.asturias.es/" target="_blank" rel="noopener noreferrer">miPrincipado</a>
+            <a href="index.html" target="_blank" rel="noopener noreferrer">BOPA</a>
+            <a href="transparencia.html" target="_blank" rel="noopener noreferrer">Transparencia</a>
+            <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">N'Asturianu</a>
+            <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">Principado de Asturias</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="cabecera-principal">
+        <div class="contenedor cabecera-contenido">
+          <a href="index.html" class="marca" aria-label="Inicio BOPA">
+            <div class="marca-asturias">
+              <img src="./imagenes/bandera-as.png" alt="Asturias">
+            </div>
+
+            <div class="marca-texto">
+              <span class="marca-principado">
+                Principado
+                <br>
+                d'Asturies
+              </span>
+
+              <span class="separador"></span>
+
+              <span class="marca-bopa">BOPA</span>
+            </div>
+          </a>
+
+          <nav class="navegacion" aria-label="Navegación principal">
+            <details class="menu-desplegable">
+              <summary>Menú</summary>
+              <div class="mega-menu" role="menu" aria-label="Menú de temas de Asturias">
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <h3>Temas</h3>
+                    <a href="buscador.html">Administración pública</a>
+                    <a href="buscador.html">Acción social e igualdad</a>
+                    <a href="buscador.html">Agricultura y gestión forestal</a>
+                    <a href="buscador.html">Comercio y consumo</a>
+                    <a href="buscador.html">Cultura</a>
+                    <a href="buscador.html">Educación y deporte</a>
+                  </div>
+                  <div class="mega-col">
+                    <h3>Gobierno</h3>
+                    <a href="buscador.html">Agenda de actos del Gobierno</a>
+                    <a href="buscador.html">Equipo de Gobierno</a>
+                    <a href="buscador.html">Acuerdos del Consejo de Gobierno</a>
+                    <a href="buscador.html">Altos cargos</a>
+                    <a href="buscador.html">Consejerías</a>
+                    <a href="buscador.html">Actualidad</a>
+                  </div>
+                  <div class="mega-col">
+                    <h3>Actualidad</h3>
+                    <a href="buscador.html">Noticias</a>
+                    <a href="buscador.html">Agenda 2030</a>
+                    <a href="buscador.html">Fondos FEDER</a>
+                    <a href="buscador.html">Portal de transparencia</a>
+                    <a href="buscador.html">Asturias Participa</a>
+                    <a href="buscador.html">Estadísticas de Asturias</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+            <a href="index.html">Inicio</a>
+            <a href="buscador.html" class="activo">Buscar</a>
+            <a href="transparencia.html">Transparencia</a>
+            <a href="ayuda.html">Ayuda</a>
+          </nav>
+
+          <div class="opciones-pagina" aria-label="Opciones de visualización">
+            <button type="button" id="boton-tema" class="boton-opcion" aria-label="Cambiar tema" title="Cambiar tema">
+              ☾
+              <span>Tema</span>
+            </button>
+
+            <button type="button" id="boton-idioma" class="boton-opcion" aria-label="Cambiar idioma" title="Cambiar idioma">
+              ES
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="contenedor pagina-documento" id="contenido-principal">
+      <article class="detalle-documento">
+        <div class="cabecera-detalle">
+          <span id="detalle-tipo" class="etiqueta etiqueta-verde">DOCUMENTO</span>
+          <h1 id="detalle-titulo">Titulo del documento</h1>
+          <div class="detalle-meta">
+            <span id="detalle-fecha">--</span>
+            <span id="detalle-numero">BOPA Nº --</span>
+          </div>
+        </div>
+
+        <div class="detalle-cuerpo">
+          <p id="detalle-descripcion">
+            Aquí se muestra la descripción completa del documento asociado al resultado seleccionado.
+          </p>
+
+          <div class="detalle-grid">
+            <div>
+              <span>Órgano emisor</span>
+              <strong id="detalle-organismo">-</strong>
+            </div>
+
+            <div>
+              <span>Tipo</span>
+              <strong id="detalle-tipoTexto">-</strong>
+            </div>
+
+            <div>
+              <span>Fecha de publicación</span>
+              <strong id="detalle-fechaTexto">-</strong>
+            </div>
+
+            <div>
+              <span>Referencia</span>
+              <strong id="detalle-referencia">-</strong>
+            </div>
+          </div>
+
+          <div class="detalle-acciones">
+            <a href="buscador.html" class="boton-secundario">Volver al buscador</a>
+            <a href="index.html" class="boton-documento">Inicio</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="pie-pagina">
+      <div class="contenedor pie-contenido">
+        <div class="pie-marca">
+          <div class="pie-bandera">
+            <img src="./imagenes/bandera-as.png" alt="Asturias">
+          </div>
+
+          <div>
+            <strong>BOPA</strong>
+            <span>Boletín Oficial del Principado de Asturias</span>
+          </div>
+        </div>
+
+        <div class="pie-enlaces">
+          <a href="mailto:info@asturias.es">Contacto</a>
+          <a href="ayuda.html">Accesibilidad</a>
+          <a href="transparencia.html">Aviso legal</a>
+          <a href="transparencia.html">Privacidad</a>
+          <a href="../resumen.html">Resumen</a>
+        </div>
+      </div>
+
+      <div class="pie-final">
+        <div class="contenedor">
+          Adrián, Marcos, Alejandro y Belén.
+          2026 © CIFP Avilés.
+          Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const botonTema = document.getElementById("boton-tema");
+      const botonIdioma = document.getElementById("boton-idioma");
+
+      botonTema.addEventListener("click", function () {
+        document.body.classList.toggle("tema-oscuro");
+        const oscuro = document.body.classList.contains("tema-oscuro");
+        botonTema.innerHTML = oscuro ? "☀ <span>Tema</span>" : "☾ <span>Tema</span>";
+      });
+
+      botonIdioma.addEventListener("click", function () {
+        botonIdioma.textContent = botonIdioma.textContent.trim() === "ES" ? "AST" : "ES";
+      });
+
+      const parametros = new URLSearchParams(window.location.search);
+      const titulo = parametros.get("titulo") || "Documento oficial";
+      const descripcion = parametros.get("descripcion") || "No se ha proporcionado una descripción detallada para este documento.";
+      const tipo = parametros.get("tipo") || "Documento";
+      const fecha = parametros.get("fecha") || "Fecha no indicada";
+      const organismo = parametros.get("organismo") || "Órgano no indicado";
+      const numero = parametros.get("numero") || "Nº no indicado";
+
+      document.getElementById("detalle-titulo").textContent = titulo;
+      document.getElementById("detalle-fecha").textContent = fecha;
+      document.getElementById("detalle-numero").textContent = `BOPA ${numero}`;
+      document.getElementById("detalle-descripcion").textContent = descripcion;
+      document.getElementById("detalle-organismo").textContent = organismo;
+      document.getElementById("detalle-tipoTexto").textContent = tipo;
+      document.getElementById("detalle-fechaTexto").textContent = fecha;
+      document.getElementById("detalle-referencia").textContent = `${numero} · ${tipo}`;
+      document.getElementById("detalle-tipo").textContent = tipo.toUpperCase();
+      document.title = `${titulo} | BOPA`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda | BOPA</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="./imagenes/escudo-as.png" type="image/png">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    <!-- Encabezado general del portal: incluye enlaces institucionales y la navegación principal -->
+    <header class="cabecera">
+      <!-- Barra superior con enlaces del Principado y servicios institucionales -->
+      <div class="barra-superior">
+        <div class="barra-superior-contenido">
+          <span>Portal oficial del Principado de Asturias</span>
+          <nav class="enlaces-superiores">
+            <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">asturias.es</a>
+            <a href="https://miprincipado.asturias.es/" target="_blank" rel="noopener noreferrer">miPrincipado</a>
+            <a href="index.html" target="_blank" rel="noopener noreferrer">BOPA</a>
+            <a href="transparencia.html" target="_blank" rel="noopener noreferrer">Transparencia</a>
+            <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">N'Asturianu</a>
+            <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">Principado de Asturias</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Cabecera principal con logo, nombre del portal y menú de navegación -->
+      <div class="cabecera-principal">
+        <div class="cabecera-contenido">
+          <a href="index.html" class="marca" aria-label="Inicio BOPA">
+            <div class="marca-asturias">
+              <img src="./imagenes/bandera-as.png" alt="Asturias">
+            </div>
+
+            <div class="marca-texto">
+              <span class="marca-principado">Principado<br>d'Asturies</span>
+              <span class="separador"></span>
+              <span class="marca-bopa">BOPA</span>
+            </div>
+          </a>
+
+          <nav class="navegacion" aria-label="Navegación principal">
+            <details class="menu-desplegable">
+              <summary>Menú</summary>
+              <div class="mega-menu" role="menu" aria-label="Menú de temas de Asturias">
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <h3>Temas</h3>
+                    <a href="buscador.html">Administración pública</a>
+                    <a href="buscador.html">Acción social e igualdad</a>
+                    <a href="buscador.html">Agricultura y gestión forestal</a>
+                    <a href="buscador.html">Comercio y consumo</a>
+                    <a href="buscador.html">Cultura</a>
+                    <a href="buscador.html">Educación y deporte</a>
+                  </div>
+                  <div class="mega-col">
+                    <h3>Gobierno</h3>
+                    <a href="buscador.html">Agenda de actos del Gobierno</a>
+                    <a href="buscador.html">Equipo de Gobierno</a>
+                    <a href="buscador.html">Acuerdos del Consejo de Gobierno</a>
+                    <a href="buscador.html">Altos cargos</a>
+                    <a href="buscador.html">Consejerías</a>
+                    <a href="buscador.html">Actualidad</a>
+                  </div>
+                  <div class="mega-col">
+                    <h3>Actualidad</h3>
+                    <a href="buscador.html">Noticias</a>
+                    <a href="buscador.html">Agenda 2030</a>
+                    <a href="buscador.html">Fondos FEDER</a>
+                    <a href="buscador.html">Portal de transparencia</a>
+                    <a href="buscador.html">Asturias Participa</a>
+                    <a href="buscador.html">Estadísticas de Asturias</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+            <a href="index.html">Inicio</a>
+            <a href="buscador.html">Buscar</a>
+            <a href="transparencia.html">Transparencia</a>
+            <a href="ayuda.html" class="activo">Ayuda</a>
+          </nav>
+
+          <div class="opciones-pagina" aria-label="Opciones de visualización">
+            <button type="button" id="boton-tema" class="boton-opcion" aria-label="Cambiar tema" title="Cambiar tema">
+              <span aria-hidden="true">☾</span>
+              <span>Tema</span>
+            </button>
+
+            <button type="button" id="boton-idioma" class="boton-opcion" aria-label="Cambiar idioma" title="Cambiar idioma">
+              ES
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contenido principal de la página: consta de dos columnas laterales y el centro con la ayuda -->
+    <main class="pagina-bopa pagina-ayuda" id="contenido-principal">
+      <!-- Columna izquierda: enlaces relacionados y accesos directos -->
+      <aside class="columna-lateral izquierda">
+        <div class="bloque-lateral">
+          <span class="titulo-lateral">NAVEGACIÓN</span>
+          <h2>También te puede interesar</h2>
+          <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">Principado de Asturias</a>
+          <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">miPrincipado</a>
+          <a href="https://sede.asturias.es/" target="_blank" rel="noopener noreferrer">Sede electrónica</a>
+          <a href="transparencia.html">Portal de transparencia</a>
+          <a href="index.html">Datos abiertos</a>
+          <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">Asturias.es</a>
+        </div>
+
+        <div class="bloque-lateral">
+          <div class="mini-bandera">
+            <img src="./imagenes/bandera-as.png" alt="Asturias">
+          </div>
+
+          <span class="titulo-lateral">BOPA</span>
+          <h2>Accesos rápidos</h2>
+          <a href="buscador.html">Buscar publicaciones</a>
+          <a href="buscador.html?tipo=decreto">Decretos</a>
+          <a href="buscador.html?tipo=resolucion">Resoluciones</a>
+          <a href="buscador.html?tipo=subvenciones">Subvenciones</a>
+        </div>
+      </aside>
+
+      <!-- Área central con la introducción y contenido de ayuda -->
+      <section class="contenido-principal">
+        <!-- Encabezado de la sección de ayuda -->
+        <div class="cabecera-buscador">
+          <span class="etiqueta etiqueta-verde">AYUDA</span>
+          <h1>¿Cómo podemos ayudarte?</h1>
+          <p>
+            Consulta las preguntas más frecuentes y descubre cómo buscar y consultar
+            publicaciones del Boletín Oficial del Principado de Asturias.
+          </p>
+        </div>
+
+        <!-- Accesos rápidos a los temas principales de ayuda -->
+        <section class="ayuda-accesos">
+          <a href="#como-buscar" class="tarjeta-ayuda">
+            <span class="icono-ayuda">⌕</span>
+            <div>
+              <h2>Cómo buscar</h2>
+              <p>Aprende a utilizar el buscador y sus filtros.</p>
+            </div>
+          </a>
+
+          <a href="#resultados" class="tarjeta-ayuda">
+            <span class="icono-ayuda">▤</span>
+            <div>
+              <h2>Resultados</h2>
+              <p>Descubre cómo interpretar los resultados de una búsqueda.</p>
+            </div>
+          </a>
+
+          <a href="#documentos" class="tarjeta-ayuda">
+            <span class="icono-ayuda">□</span>
+            <div>
+              <h2>Consultar documentos</h2>
+              <p>Información sobre la ficha y contenido de las publicaciones.</p>
+            </div>
+          </a>
+
+          <a href="#accesibilidad" class="tarjeta-ayuda">
+            <span class="icono-ayuda">◉</span>
+            <div>
+              <h2>Accesibilidad</h2>
+              <p>Información sobre las opciones de accesibilidad del portal.</p>
+            </div>
+          </a>
+        </section>
+
+        <!-- Sección de búsqueda: explica cómo localizar una publicación -->
+        <section class="seccion-ayuda" id="como-buscar">
+          <div class="titulo-seccion-ayuda">
+            <span class="etiqueta etiqueta-verde">BUSCADOR</span>
+            <h2>Cómo realizar una búsqueda</h2>
+          </div>
+
+          <div class="pregunta">
+            <h3>¿Cómo puedo encontrar una publicación?</h3>
+            <p>
+              Accede al apartado «Buscar» y escribe una palabra relacionada con el
+              contenido que quieres encontrar. Puedes buscar por conceptos,
+              organismos, tipos de publicación o términos concretos.
+            </p>
+          </div>
+
+          <div class="pregunta">
+            <h3>¿Puedo combinar varios filtros?</h3>
+            <p>
+              Sí. Puedes combinar diferentes filtros para reducir el número de
+              resultados. Por ejemplo, puedes seleccionar una Consejería y limitar
+              la búsqueda a un determinado periodo de publicación.
+            </p>
+          </div>
+
+          <div class="pregunta">
+            <h3>¿Qué tipos de publicaciones puedo buscar?</h3>
+            <p>
+              El buscador permite localizar diferentes tipos de publicaciones, como
+              decretos, resoluciones, oposiciones y concursos, subvenciones y anuncios.
+            </p>
+          </div>
+        </section>
+
+        <!-- Sección de resultados: explica cómo leer e interpretar la información devuelta -->
+        <section class="seccion-ayuda" id="resultados">
+          <div class="titulo-seccion-ayuda">
+            <span class="etiqueta etiqueta-azul">RESULTADOS</span>
+            <h2>Cómo interpretar los resultados</h2>
+          </div>
+
+          <div class="pregunta">
+            <h3>¿Qué información aparece en cada resultado?</h3>
+            <p>
+              Cada resultado muestra el tipo de publicación, su fecha, título,
+              órgano emisor, número del BOPA y una breve descripción para que
+              puedas identificar el documento antes de abrirlo.
+            </p>
+          </div>
+
+          <div class="pregunta">
+            <h3>¿Qué significa «Vista previa»?</h3>
+            <p>
+              La vista previa permite consultar rápidamente la información principal
+              de una publicación sin abandonar la página de resultados.
+            </p>
+          </div>
+
+          <div class="pregunta">
+            <h3>¿Cómo puedo ordenar los resultados?</h3>
+            <p>
+              Puedes utilizar el selector de ordenación situado encima de los
+              resultados para consultar las publicaciones por relevancia, fecha o
+              número de consultas.
+            </p>
+          </div>
+        </section>
+
+        <!-- Sección de documentos: guía paso a paso para consultar una publicación -->
+        <section class="seccion-ayuda" id="documentos">
+          <div class="titulo-seccion-ayuda">
+            <span class="etiqueta etiqueta-verde">DOCUMENTOS</span>
+            <h2>Consultar una publicación</h2>
+          </div>
+
+          <div class="pasos-ayuda">
+            <div class="paso-ayuda">
+              <span class="numero-paso">01</span>
+              <div>
+                <h3>Localiza el documento</h3>
+                <p>
+                  Utiliza el buscador y sus filtros para localizar la publicación que
+                  necesitas.
+                </p>
+              </div>
+            </div>
+
+            <div class="paso-ayuda">
+              <span class="numero-paso">02</span>
+              <div>
+                <h3>Revisa la información</h3>
+                <p>
+                  Comprueba el título, fecha, órgano emisor y número de BOPA antes de
+                  acceder al documento.
+                </p>
+              </div>
+            </div>
+
+            <div class="paso-ayuda">
+              <span class="numero-paso">03</span>
+              <div>
+                <h3>Consulta el documento</h3>
+                <p>
+                  Pulsa «Consultar» para acceder a la ficha completa de la publicación.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección de accesibilidad: explica cómo se ha pensado el diseño para facilitar su uso -->
+        <section class="seccion-ayuda" id="accesibilidad">
+          <div class="titulo-seccion-ayuda">
+            <span class="etiqueta etiqueta-azul">ACCESIBILIDAD</span>
+            <h2>Un BOPA más fácil de consultar</h2>
+          </div>
+
+          <div class="bloque-accesibilidad">
+            <p>
+              El rediseño busca facilitar la consulta del boletín mediante una
+              estructura clara, una jerarquía visual sencilla y controles
+              identificables.
+            </p>
+
+            <ul>
+              <li>Contraste suficiente entre texto y fondo.</li>
+              <li>Estructura de contenidos clara.</li>
+              <li>Botones y enlaces diferenciados.</li>
+              <li>Diseño adaptable a diferentes tamaños de pantalla.</li>
+              <li>Información organizada para reducir la carga cognitiva.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Bloque final de contacto para ofrecer ayuda adicional -->
+        <section class="contacto-ayuda">
+          <div>
+            <span class="etiqueta etiqueta-verde">¿NECESITAS MÁS AYUDA?</span>
+            <h2>No encuentras lo que buscas</h2>
+            <p>
+              Si necesitas información adicional sobre el funcionamiento del Boletín
+              Oficial del Principado de Asturias, consulta los canales oficiales del
+              Principado.
+            </p>
+          </div>
+          <a href="mailto:info@asturias.es" class="boton-secundario">Contactar</a>
+        </section>
+      </section>
+
+      <!-- Columna derecha: índice de la página y consejos útiles -->
+      <aside class="columna-lateral derecha">
+        <div class="bloque-lateral">
+          <span class="titulo-lateral">EN ESTA PÁGINA</span>
+          <h2>Ir a</h2>
+          <a href="#como-buscar">Cómo buscar</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#documentos">Documentos</a>
+          <a href="#accesibilidad">Accesibilidad</a>
+        </div>
+
+        <div class="bloque-lateral bloque-destacado">
+          <span class="titulo-lateral">CONSEJO</span>
+          <h2>Una búsqueda más precisa</h2>
+          <p>
+            Si obtienes demasiados resultados, combina una palabra clave con un tipo
+            de publicación, organismo o fecha.
+          </p>
+        </div>
+
+        <div class="bloque-lateral">
+          <span class="titulo-lateral">ACCESO DIRECTO</span>
+          <h2>¿Quieres buscar?</h2>
+          <a href="buscador.html" class="enlace-destacado">Ir al buscador →</a>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Pie de página institucional con marca y enlaces legales -->
+    <footer class="pie-pagina">
+      <div class="pie-contenido">
+        <div class="pie-marca">
+          <div class="pie-bandera">
+            <img src="./imagenes/bandera-as.png" alt="Asturias">
+          </div>
+
+          <div>
+            <strong>BOPA</strong>
+            <span>Boletín Oficial del Principado de Asturias</span>
+          </div>
+        </div>
+        <div class="pie-enlaces">
+          <a href="mailto:info@asturias.es">Contacto</a>
+          <a href="ayuda.html">Accesibilidad</a>
+          <a href="transparencia.html">Aviso legal</a>
+          <a href="transparencia.html">Privacidad</a>
+          <a href="../resumen.html">Resumen</a>
+        </div>
+      </div>
+      <div class="pie-final">
+        Adrián, Marcos, Alejandro y Belén. 2026 © CIFP Avilés. Todos los derechos
+        reservados.
+      </div>
+    </footer>
+
+    <script>
+      const botonTema = document.getElementById("boton-tema");
+
+      document.addEventListener('click', function (event) {
+        const link = event.target.closest('a[href]');
+        if (!link) {
+          return;
+        }
+
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+          return;
+        }
+
+        event.preventDefault();
+        window.location.href = 'cargar.html?next=' + encodeURIComponent(href);
+      });
+
+      botonTema.addEventListener("click", function () {
+        document.body.classList.toggle("tema-oscuro");
+
+        const oscuro = document.body.classList.contains("tema-oscuro");
+
+        if (oscuro) {
+          botonTema.innerHTML = "☀ <span>Tema</span>";
+        } else {
+          botonTema.innerHTML = "☾ <span>Tema</span>";
+        }
+      });
+
+      const botonIdioma = document.getElementById("boton-idioma");
+
+      botonIdioma.addEventListener("click", function () {
+        if (botonIdioma.textContent.trim() === "ES") {
+          botonIdioma.textContent = "AST";
+        } else {
+          botonIdioma.textContent = "ES";
+        }
+      });
+    </script>
+  </body>
+</html>

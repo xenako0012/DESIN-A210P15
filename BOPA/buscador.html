@@ -1,0 +1,712 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar | BOPA - Principado de Asturias</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="./imagenes/escudo-as.png" type="image/png">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    <!-- Cabecera principal con logo, marca y navegación del sitio -->
+    <header class="cabecera">
+      <div class="barra-superior">
+        <div class="contenedor barra-superior-contenido">
+          <span class="portal-oficial">Portal oficial del Principado de Asturias</span>
+
+          <nav class="enlaces-superiores">
+            <a href="https://www.asturias.es/ast/" target="_blank" rel="noopener noreferrer">asturias.es</a>
+            <a href="https://miprincipado.asturias.es/" target="_blank" rel="noopener noreferrer">miPrincipado</a>
+            <a href="index.html" target="_blank" rel="noopener noreferrer">BOPA</a>
+            <a href="transparencia.html" target="_blank" rel="noopener noreferrer">Transparencia</a>
+            <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">N'Asturianu</a>
+            <a href="https://www.asturias.es/" target="_blank" rel="noopener noreferrer">Principado de Asturias</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="cabecera-principal">
+        <div class="contenedor cabecera-contenido">
+          <!-- Marca del portal con bandera y nombre del Principado -->
+          <a href="index.html" class="marca" aria-label="Inicio BOPA">
+            <div class="marca-asturias">
+              <img src="./imagenes/bandera-as.png" alt="Asturias">
+            </div>
+
+            <div class="marca-texto">
+              <span class="marca-principado">
+                Principado
+                <br>
+                d'Asturies
+              </span>
+
+              <span class="separador"></span>
+
+              <span class="marca-bopa">BOPA</span>
+            </div>
+          </a>
+
+          <!-- Menú principal de navegación del sitio -->
+          <nav class="navegacion" aria-label="Navegación principal">
+            <details class="menu-desplegable">
+              <summary>Menú</summary>
+              <div class="mega-menu" role="menu" aria-label="Menú de temas de Asturias">
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <h3>Temas</h3>
+                    <a href="buscador.html">Administración pública</a>
+                    <a href="buscador.html">Acción social e igualdad</a>
+                    <a href="buscador.html">Agricultura y gestión forestal</a>
+                    <a href="buscador.html">Comercio y consumo</a>
+                    <a href="buscador.html">Cultura</a>
+                    <a href="buscador.html">Educación y deporte</a>
+                  </div>
+                  <div class="mega-col">
+                    <h3>Gobierno</h3>
+                    <a href="buscador.html">Agenda de actos del Gobierno</a>
+                    <a href="buscador.html">Equipo de Gobierno</a>
+                    <a href="buscador.html">Acuerdos del Consejo de Gobierno</a>
+                    <a href="buscador.html">Altos cargos</a>
+                    <a href="buscador.html">Consejerías</a>
+                    <a href="buscador.html">Actualidad</a>
+                  </div>
+                  <div class="mega-col">
+                    <h3>Actualidad</h3>
+                    <a href="buscador.html">Noticias</a>
+                    <a href="buscador.html">Agenda 2030</a>
+                    <a href="buscador.html">Fondos FEDER</a>
+                    <a href="buscador.html">Portal de transparencia</a>
+                    <a href="buscador.html">Asturias Participa</a>
+                    <a href="buscador.html">Estadísticas de Asturias</a>
+                  </div>
+                </div>
+              </div>
+            </details>
+            <a href="index.html">Inicio</a>
+            <a href="buscador.html" class="activo">Buscar</a>
+            <a href="transparencia.html">Transparencia</a>
+            <a href="ayuda.html">Ayuda</a>
+          </nav>
+
+          <!-- Acciones generales de la página -->
+          <div class="opciones-pagina" aria-label="Opciones de visualización">
+            <button type="button" id="boton-tema" class="boton-opcion" aria-label="Cambiar tema" title="Cambiar tema">
+              ☾
+              <span>Tema</span>
+            </button>
+
+            <button type="button" id="boton-idioma" class="boton-opcion" aria-label="Cambiar idioma" title="Cambiar idioma">
+              ES
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contenido principal del buscador con columnas laterales y zona de resultados -->
+    <main class="pagina-bopa pagina-buscador contenedor" id="contenido-principal">
+      <!-- Columna izquierda: navegación secundaria, consultas rápidas y bloques institucionales -->
+      <aside class="columna-lateral izquierda">
+        <!-- Enlaces de interés del Principado -->
+        <div class="bloque-lateral">
+          <span class="titulo-lateral">NAVEGACIÓN</span>
+          <h2>También te puede interesar</h2>
+
+          <a href="https://www.asturias.es/ast/">Principado de Asturias</a>
+          <a href="https://miprincipado.asturias.es/">miPrincipado</a>
+          <a href="https://sede-electronica.asturias.es/">Sede electrónica</a>
+          <a href="transparencia.html">Portal de transparencia</a>
+          <a href="https://datos.abiertos.asturias.es/">Datos abiertos</a>
+          <a href="https://www.asturias.es/ast/">Asturias.es</a>
+        </div>
+
+        <!-- Accesos rápidos a tipos de publicación -->
+        <div class="bloque-lateral">
+          <span class="titulo-lateral">BOPA</span>
+          <h2>Consulta rápida</h2>
+
+          <a href="buscador.html?tipo=decreto">Decretos</a>
+          <a href="buscador.html?tipo=resolucion">Resoluciones</a>
+          <a href="buscador.html?tipo=oposiciones">Oposiciones</a>
+          <a href="buscador.html?tipo=subvenciones">Subvenciones</a>
+        </div>
+
+        <!-- Bloque institucional de Asturias -->
+        <div class="bloque-lateral bloque-asturias">
+          <div class="mini-bandera">
+            <img src="./imagenes/bandera-as.png" alt="Bandera de Asturias">
+          </div>
+
+          <strong>Información oficial</strong>
+          <p>Consulta las publicaciones oficiales del Principado de Asturias.</p>
+        </div>
+      </aside>
+
+      <!-- Área central: buscador, filtros y resultados -->
+      <section class="contenido-principal">
+        <!-- Encabezado introductorio de la búsqueda -->
+        <div class="cabecera-buscador">
+          <span class="etiqueta etiqueta-verde">BOPA</span>
+          <h1>Buscar en el Boletín Oficial</h1>
+          <p>
+            Encuentra disposiciones, resoluciones, convocatorias y anuncios utilizando
+            palabras clave o filtros.
+          </p>
+        </div>
+
+        <!-- Panel principal del buscador -->
+        <section class="panel-busqueda">
+          <div class="cabecera-panel">
+            <div>
+              <span class="etiqueta etiqueta-azul">BUSCADOR</span>
+              <h2>¿Qué estás buscando?</h2>
+              <p>Puedes buscar por palabras clave, organismo, tipo de publicación o fecha.</p>
+            </div>
+          </div>
+
+          <form id="form-busqueda">
+            <label for="busqueda-principal">Buscar en el BOPA</label>
+
+            <div class="busqueda-principal">
+              <div class="input-con-icono">
+                <span class="icono-busqueda">⌕</span>
+                <input
+                  type="search"
+                  id="busqueda-principal"
+                  name="q"
+                  placeholder="Ej.: educación, subvenciones, decreto..."
+                  autocomplete="off"
+                >
+              </div>
+
+              <button type="submit" class="boton-buscar">Buscar</button>
+            </div>
+
+            <!-- Sugerencias dinámicas generadas al escribir -->
+            <div id="sugerencias" class="sugerencias"></div>
+
+            <!-- Búsquedas frecuentes para acceso rápido -->
+            <div class="ejemplos-busqueda">
+              <span>Búsquedas populares:</span>
+
+              <button type="button" data-busqueda="educación">educación</button>
+              <button type="button" data-busqueda="subvenciones">subvenciones</button>
+              <button type="button" data-busqueda="empleo público">empleo público</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Contenedor de filtros y resultados -->
+        <div class="zona-resultados">
+          <!-- Panel lateral con filtros para refinar la búsqueda -->
+          <aside class="filtros">
+            <div class="filtros-cabecera">
+              <div>
+                <span class="etiqueta etiqueta-verde">FILTROS</span>
+                <h2>Refinar resultados</h2>
+              </div>
+
+              <button type="button" id="limpiar-filtros" class="boton-limpiar">Limpiar</button>
+            </div>
+
+            <!-- Filtro por tipo de publicación -->
+            <div class="grupo-filtro">
+              <h3>Tipo de publicación</h3>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="tipo" value="decreto">
+                <span>Decretos</span>
+                <small>24</small>
+              </label>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="tipo" value="resolucion">
+                <span>Resoluciones</span>
+                <small>38</small>
+              </label>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="tipo" value="oposiciones">
+                <span>Oposiciones y concursos</span>
+                <small>17</small>
+              </label>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="tipo" value="subvenciones">
+                <span>Subvenciones</span>
+                <small>29</small>
+              </label>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="tipo" value="anuncio">
+                <span>Anuncios</span>
+                <small>42</small>
+              </label>
+            </div>
+
+            <!-- Filtro por órgano emisor -->
+            <div class="grupo-filtro">
+              <h3>Órgano emisor</h3>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="organismo" value="educacion">
+                <span>Educación</span>
+                <small>31</small>
+              </label>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="organismo" value="salud">
+                <span>Salud</span>
+                <small>26</small>
+              </label>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="organismo" value="presidencia">
+                <span>Presidencia</span>
+                <small>18</small>
+              </label>
+
+              <label class="checkbox-filtro">
+                <input type="checkbox" name="organismo" value="empleo">
+                <span>Empleo</span>
+                <small>22</small>
+              </label>
+            </div>
+
+            <!-- Filtro por rango de fechas -->
+            <div class="grupo-filtro">
+              <h3>Fecha de publicación</h3>
+
+              <label class="campo-fecha">
+                <span>Desde</span>
+                <input type="date" id="fecha-desde">
+              </label>
+
+              <label class="campo-fecha">
+                <span>Hasta</span>
+                <input type="date" id="fecha-hasta">
+              </label>
+            </div>
+
+            <!-- Filtro por número del boletín -->
+            <div class="grupo-filtro">
+              <h3>Número de BOPA</h3>
+              <input type="number" id="numero-bopa" class="input-filtro" placeholder="Ej.: 186" min="1">
+            </div>
+          </aside>
+
+          <!-- Sección de resultados de la búsqueda -->
+          <section class="resultados">
+            <div class="resultados-cabecera">
+              <div>
+                <span id="numero-resultados" class="contador-resultados">6 resultados</span>
+                <p id="texto-filtro">Publicaciones encontradas</p>
+              </div>
+
+              <div class="ordenar">
+                <label for="orden">Ordenar por</label>
+
+                <select id="orden">
+                  <option value="relevancia">Relevancia</option>
+                  <option value="fecha-desc">Más recientes</option>
+                  <option value="fecha-asc">Más antiguos</option>
+                  <option value="consultados">Más consultados</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ejemplos visuales para comprobar cómo se verían los resultados con los filtros -->
+            <div id="lista-resultados" class="lista-resultados"></div>
+
+            <!-- Mensaje cuando no hay coincidencias -->
+            <div id="sin-resultados" class="sin-resultados" hidden>
+              <div class="icono-sin-resultados">?</div>
+              <h2>No hemos encontrado resultados</h2>
+              <p>Prueba con otras palabras o elimina alguno de los filtros.</p>
+
+              <button type="button" id="reiniciar-busqueda" class="boton-secundario">
+                Limpiar búsqueda
+              </button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Columna derecha: accesos rápidos, consejos y historial -->
+      <aside class="columna-lateral derecha">
+        <!-- Accesos rápidos por tipo de publicación -->
+        <div class="bloque-lateral">
+          <span class="titulo-lateral">ACCESOS RÁPIDOS</span>
+          <h2>Buscar por tipo</h2>
+
+          <a href="buscador.html?tipo=decreto">Decretos</a>
+          <a href="buscador.html?tipo=resolucion">Resoluciones</a>
+          <a href="buscador.html?tipo=oposiciones">Oposiciones y concursos</a>
+          <a href="buscador.html?tipo=subvenciones">Subvenciones</a>
+          <a href="buscador.html">Todas las publicaciones</a>
+        </div>
+
+        <!-- Consejo útil para mejorar la búsqueda -->
+        <div class="bloque-lateral bloque-destacado">
+          <span class="titulo-lateral">CONSEJO</span>
+          <h2>Utiliza varios filtros</h2>
+          <p>
+            Combinar palabras clave, organismo y fecha te ayudará a encontrar el documento que buscas.
+          </p>
+        </div>
+
+        <!-- Historial de búsquedas recientes del usuario -->
+        <div class="bloque-lateral">
+          <span class="titulo-lateral">HISTORIAL</span>
+          <h2>Búsquedas recientes</h2>
+
+          <div id="historial-busquedas" class="historial-busquedas">
+            <span>Todavía no hay búsquedas.</span>
+          </div>
+        </div>
+
+        <!-- Bloque informativo final de Asturias -->
+        <div class="bloque-lateral bloque-asturias">
+          <div class="mini-bandera">
+            <img src="./imagenes/bandera-as.png" alt="Asturias">
+          </div>
+
+          <span class="titulo-lateral">ASTURIAS</span>
+          <h2>Publicación oficial</h2>
+          <p>Información publicada por el Boletín Oficial del Principado de Asturias.</p>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Modal de vista previa para consultar información sin salir de la página -->
+    <div id="modal-preview" class="modal-preview" hidden>
+      <div class="modal-fondo"></div>
+
+      <div class="modal-contenido">
+        <button type="button" id="cerrar-modal" class="cerrar-modal" aria-label="Cerrar vista previa">
+          ✕
+        </button>
+
+        <span class="etiqueta etiqueta-verde">VISTA PREVIA</span>
+
+        <div id="preview-contenido">
+          <!-- Contenido generado por JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie de página institucional del portal -->
+    <footer class="pie-pagina">
+      <div class="contenedor pie-contenido">
+        <div class="pie-marca">
+          <div class="pie-bandera">
+            <img src="./imagenes/bandera-as.png" alt="Asturias">
+          </div>
+
+          <div>
+            <strong>BOPA</strong>
+            <span>Boletín Oficial del Principado de Asturias</span>
+          </div>
+        </div>
+
+        <div class="pie-enlaces">
+          <a href="mailto:info@asturias.es">Contacto</a>
+          <a href="ayuda.html">Accesibilidad</a>
+          <a href="transparencia.html">Aviso legal</a>
+          <a href="transparencia.html">Privacidad</a>
+          <a href="../resumen.html">Resumen</a>
+        </div>
+      </div>
+
+      <div class="pie-final">
+        <div class="contenedor">
+          Adrián, Marcos, Alejandro y Belén.
+          2026 © CIFP Avilés.
+          Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cambio de tema para permitir alternar entre modo claro y oscuro -->
+    <script>
+      const botonTema = document.getElementById("boton-tema");
+      const modalPreview = document.getElementById("modal-preview");
+      const previewContenido = document.getElementById("preview-contenido");
+      const cerrarModal = document.getElementById("cerrar-modal");
+      const modalFondo = document.querySelector(".modal-fondo");
+      const listaResultados = document.getElementById("lista-resultados");
+      const contadorResultados = document.getElementById("numero-resultados");
+      const textoFiltro = document.getElementById("texto-filtro");
+
+      const resultadosBase = [
+        {
+          titulo: "Decreto por el que se aprueba la nueva convocatoria de becas para educación superior",
+          descripcion: "Modificación de la normativa de ayudas al estudio con nuevas condiciones de acceso y ampliación de cupos para estudiantes de la comunidad autónoma.",
+          tipo: "Decreto",
+          tipoKey: "decreto",
+          fecha: "15/10/2026",
+          organismo: "Educación",
+          organismoKey: "educacion",
+          numero: "Nº 186"
+        },
+        {
+          titulo: "Resolución del Servicio de Salud sobre ampliación de plazas en atención primaria",
+          descripcion: "Se establece la ampliación de recursos humanos y la reorganización de las consultas para mejorar la atención sanitaria en varios municipios.",
+          tipo: "Resolución",
+          tipoKey: "resolucion",
+          fecha: "12/10/2026",
+          organismo: "Salud",
+          organismoKey: "salud",
+          numero: "Nº 185"
+        },
+        {
+          titulo: "Oposiciones y concursos para personal administrativo de la Presidencia del Principado",
+          descripcion: "Convocatoria para cubrir plazas vacantes en la administración general del Principado y reforzar los servicios de la oficina del presidente.",
+          tipo: "Oposición",
+          tipoKey: "oposiciones",
+          fecha: "08/10/2026",
+          organismo: "Presidencia",
+          organismoKey: "presidencia",
+          numero: "Nº 184"
+        },
+        {
+          titulo: "Subvenciones para programas de empleo juvenil y formación para adultos en Asturias",
+          descripcion: "Resolución de concesión de ayudas para impulsar la empleabilidad y la formación profesional en municipios con mayor tasa de desempleo.",
+          tipo: "Subvención",
+          tipoKey: "subvenciones",
+          fecha: "05/10/2026",
+          organismo: "Empleo",
+          organismoKey: "empleo",
+          numero: "Nº 183"
+        },
+        {
+          titulo: "Anuncio de licitación para la renovación de material escolar del sistema educativo asturiano",
+          descripcion: "Publicación del proceso de contratación para la renovación de equipamiento y material didáctico en centros educativos públicos.",
+          tipo: "Anuncio",
+          tipoKey: "anuncio",
+          fecha: "02/10/2026",
+          organismo: "Educación",
+          organismoKey: "educacion",
+          numero: "Nº 182"
+        },
+        {
+          titulo: "Resolución de Presidencia sobre aprobación del calendario de actuaciones institucionales",
+          descripcion: "Se aprueba el calendario de reuniones, comparecencias y eventos institucionales para el último trimestre del ejercicio vigente.",
+          tipo: "Resolución",
+          tipoKey: "resolucion",
+          fecha: "28/09/2026",
+          organismo: "Presidencia",
+          organismoKey: "presidencia",
+          numero: "Nº 181"
+        }
+      ];
+
+      function obtenerFiltrosSeleccionados(nombre) {
+        return Array.from(document.querySelectorAll(`input[name="${nombre}"]:checked`)).map((input) => input.value);
+      }
+
+      function obtenerTextoBusqueda() {
+        return document.getElementById("busqueda-principal").value.trim().toLowerCase();
+      }
+
+      function renderizarResultados() {
+        const tiposSeleccionados = obtenerFiltrosSeleccionados("tipo");
+        const organismosSeleccionados = obtenerFiltrosSeleccionados("organismo");
+        const textoBusqueda = obtenerTextoBusqueda();
+
+        const resultadosFiltrados = resultadosBase.filter((resultado) => {
+          const coincideTipo = tiposSeleccionados.length === 0 || tiposSeleccionados.includes(resultado.tipoKey);
+          const coincideOrganismo = organismosSeleccionados.length === 0 || organismosSeleccionados.includes(resultado.organismoKey);
+          const coincideTexto = !textoBusqueda || (
+            resultado.titulo.toLowerCase().includes(textoBusqueda) ||
+            resultado.descripcion.toLowerCase().includes(textoBusqueda) ||
+            resultado.organismo.toLowerCase().includes(textoBusqueda) ||
+            resultado.tipo.toLowerCase().includes(textoBusqueda)
+          );
+
+          return coincideTipo && coincideOrganismo && coincideTexto;
+        });
+
+        listaResultados.innerHTML = "";
+
+        if (resultadosFiltrados.length === 0) {
+          document.getElementById("sin-resultados").hidden = false;
+          contadorResultados.textContent = "0 resultados";
+          textoFiltro.textContent = "No se han encontrado publicaciones con estos filtros";
+          return;
+        }
+
+        document.getElementById("sin-resultados").hidden = true;
+        contadorResultados.textContent = `${resultadosFiltrados.length} resultados`;
+        textoFiltro.textContent = "Publicaciones encontradas";
+
+        resultadosFiltrados.forEach((resultado) => {
+          const articulo = document.createElement("article");
+          articulo.className = "resultado";
+
+          articulo.innerHTML = `
+            <div class="resultado-superior">
+              <div class="resultado-meta">
+                <span class="etiqueta-resultado">${resultado.tipo}</span>
+                <span class="fecha-resultado">${resultado.fecha}</span>
+              </div>
+            </div>
+
+            <h2>${resultado.titulo}</h2>
+            <p class="resultado-descripcion">${resultado.descripcion}</p>
+
+            <div class="resultado-inferior">
+              <div class="resultado-datos">
+                <span class="resultado-dato"><strong>Órgano:</strong> ${resultado.organismo}</span>
+                <span class="resultado-dato"><strong>BOPA:</strong> ${resultado.numero}</span>
+              </div>
+
+              <div class="resultado-acciones">
+                <button type="button" class="boton-preview">Vista previa</button>
+                <a href="documento.html?titulo=${encodeURIComponent(resultado.titulo)}&descripcion=${encodeURIComponent(resultado.descripcion)}&tipo=${encodeURIComponent(resultado.tipo)}&fecha=${encodeURIComponent(resultado.fecha)}&organismo=${encodeURIComponent(resultado.organismo)}&numero=${encodeURIComponent(resultado.numero)}" class="boton-documento">Ver documento</a>
+              </div>
+            </div>
+          `;
+
+          listaResultados.appendChild(articulo);
+        });
+
+        document.querySelectorAll('.boton-preview').forEach(function (boton) {
+          boton.addEventListener('click', function () {
+            abrirVistaPrevia(boton);
+          });
+        });
+      }
+
+      document.addEventListener('click', function (event) {
+        const link = event.target.closest('a[href]');
+        if (!link) {
+          return;
+        }
+
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+          return;
+        }
+
+        event.preventDefault();
+        window.location.href = 'cargar.html?next=' + encodeURIComponent(href);
+      });
+
+      botonTema.addEventListener("click", function () {
+        document.body.classList.toggle("tema-oscuro");
+
+        const oscuro = document.body.classList.contains("tema-oscuro");
+
+        if (oscuro) {
+          botonTema.innerHTML = "☀ <span>Tema</span>";
+        } else {
+          botonTema.innerHTML = "☾ <span>Tema</span>";
+        }
+      });
+
+      /* Botones de búsqueda popular para rellenar el campo de texto con una sugerencia típica */
+      const botonesBusqueda = document.querySelectorAll("[data-busqueda]");
+      const campoBusqueda = document.getElementById("busqueda-principal");
+
+      botonesBusqueda.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+          campoBusqueda.value = boton.dataset.busqueda;
+          campoBusqueda.focus();
+          renderizarResultados();
+        });
+      });
+
+      /* Botón de idioma: por ahora solo cambia la etiqueta visual, sin traducir aún el contenido */
+      const botonIdioma = document.getElementById("boton-idioma");
+
+      botonIdioma.addEventListener("click", function () {
+        if (botonIdioma.textContent.trim() === "ES") {
+          botonIdioma.textContent = "AST";
+        } else {
+          botonIdioma.textContent = "ES";
+        }
+      });
+
+      function cerrarVistaPrevia() {
+        modalPreview.hidden = true;
+      }
+
+      function abrirVistaPrevia(boton) {
+        const tarjeta = boton.closest('.resultado');
+        if (!tarjeta) {
+          return;
+        }
+
+        const titulo = tarjeta.querySelector('h2')?.textContent.trim() || 'Documento';
+        const descripcion = tarjeta.querySelector('.resultado-descripcion')?.textContent.trim() || 'Sin descripción disponible.';
+        const tipo = tarjeta.querySelector('.etiqueta-resultado')?.textContent.trim() || 'Publicación';
+        const fecha = tarjeta.querySelector('.fecha-resultado')?.textContent.trim() || 'Fecha no indicada';
+        const datos = Array.from(tarjeta.querySelectorAll('.resultado-dato'));
+        const organismo = datos.find((item) => item.textContent.includes('Órgano'))
+          ?.textContent.replace('Órgano:', '').trim() || 'No indicado';
+        const numeroBopa = datos.find((item) => item.textContent.includes('BOPA'))
+          ?.textContent.replace('BOPA:', '').trim() || 'No indicado';
+
+        previewContenido.innerHTML = `
+          <span class="etiqueta etiqueta-verde">VISTA PREVIA</span>
+          <h2>${titulo}</h2>
+          <p>${descripcion}</p>
+
+          <div class="preview-datos">
+            <div class="preview-dato">
+              <span>Tipo</span>
+              <strong>${tipo}</strong>
+            </div>
+
+            <div class="preview-dato">
+              <span>Fecha</span>
+              <strong>${fecha}</strong>
+            </div>
+
+            <div class="preview-dato">
+              <span>Órgano emisor</span>
+              <strong>${organismo}</strong>
+            </div>
+
+            <div class="preview-dato">
+              <span>BOPA</span>
+              <strong>${numeroBopa}</strong>
+            </div>
+          </div>
+
+          <p>
+            Esta publicación forma parte del boletín oficial correspondiente y se puede consultar en su versión completa desde el documento asociado.
+          </p>
+        `;
+
+        modalPreview.hidden = false;
+      }
+
+      document.querySelectorAll('input[name="tipo"], input[name="organismo"]').forEach(function (input) {
+        input.addEventListener('change', renderizarResultados);
+      });
+
+      campoBusqueda.addEventListener('input', renderizarResultados);
+      document.getElementById("limpiar-filtros").addEventListener("click", function () {
+        document.querySelectorAll('input[name="tipo"]').forEach((input) => input.checked = false);
+        document.querySelectorAll('input[name="organismo"]').forEach((input) => input.checked = false);
+        campoBusqueda.value = "";
+        renderizarResultados();
+      });
+
+      cerrarModal.addEventListener('click', cerrarVistaPrevia);
+      modalFondo.addEventListener('click', cerrarVistaPrevia);
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !modalPreview.hidden) {
+          cerrarVistaPrevia();
+        }
+      });
+
+      renderizarResultados();
+    </script>
+  </body>
+</html>
